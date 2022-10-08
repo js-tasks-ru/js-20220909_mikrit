@@ -71,6 +71,9 @@ export default class SortableTable {
       </div>
       <div class="sortable-table__cell" data-id="title" data-sortable="true" data-order="asc">
         <span>Name</span>
+        <span data-element="arrow" class="sortable-table__sort-arrow">
+          <span class="sort-arrow"></span>
+        </span>
       </div>
     </div>
   */
