@@ -1,12 +1,18 @@
 export default class DoubleSlider {
   element;
+
   subElements = {
     thumbLeft: undefined,
     thumbRight: undefined,
     inner: undefined
   };
 
-  constructor({min = 100, max = 200, formatValue = value => '$' + value, selected = {from: min, to: max}} = {}) {
+  constructor({
+    min = 100,
+    max = 200,
+    formatValue = value => '$' + value,
+    selected = {from: min, to: max}} = {}
+  ) {
     this.min = min;
     this.max = max;
     this.formatValue = formatValue;
@@ -21,7 +27,7 @@ export default class DoubleSlider {
     element.innerHTML = this.template();
 
     this.element = element.firstElementChild;
-    this.element.ondragstart = function() {return false;}
+    this.element.ondragstart = function() {return false;};
 
     this.subElements = this.getSubElements(element);
 
@@ -29,18 +35,6 @@ export default class DoubleSlider {
 
     this.update();
   }
-
-  /*
-    <div class="range-slider">
-      <span>$30</span>
-      <div class="range-slider__inner">
-        <span class="range-slider__progress" style="left: 0%; right: 0%"></span>
-        <span class="range-slider__thumb-left" style="left: 0%"></span>
-        <span class="range-slider__thumb-right" style="right: 0%"></span>
-      </div>
-      <span>$70</span>
-    </div>
-  */
 
   template() {
     const {from, to} = this.selected;

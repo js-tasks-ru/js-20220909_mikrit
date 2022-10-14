@@ -1,36 +1,4 @@
 export default class SortableTable {
-
-  /*
-    {
-      "id": "shkolniy-ryukzak-(ranets)-scooli-star-wars-sw13824",
-      "title": "Школьный рюкзак (ранец) Scooli Star Wars SW13824",
-      "description": "Вес: 280; мягкие лямки; ортопедическая спинка; жесткий каркас; пенал; Замок: молния; Пол: для мальчиков; Возрастная группа: школьный; Тип: ранец",
-      "quantity": 89,
-      "subcategory": {
-        "id": "shkolnye-tovary",
-        "title": "Школьные товары",
-        "count": 16,
-        "category": {
-          "id": "detskie-tovary-i-igrushki",
-          "title": "Детские товары и игрушки",
-          "count": 83,
-          "weight": 1
-        },
-        "weight": 6
-      },
-      "status": 1,
-      "images": [
-        {
-          "url": "http://magazilla.ru/jpg_zoom1/905979.jpg",
-          "source": "905979.jpg"
-        }
-      ],
-      "price": 16,
-      "discount": 0,
-      "sales": 9
-    }
-  */
-
   element;
   subElements = {};
 
@@ -103,20 +71,6 @@ export default class SortableTable {
     `;
   }
 
-  /*
-    <div data-element="header" class="sortable-table__header sortable-table__row">
-      <div class="sortable-table__cell" data-id="images" data-sortable="false" data-order="asc">
-        <span>Image</span>
-      </div>
-      <div class="sortable-table__cell" data-id="title" data-sortable="true" data-order="asc">
-        <span>Name</span>
-        <span data-element="arrow" class="sortable-table__sort-arrow">
-          <span class="sort-arrow"></span>
-        </span>
-      </div>
-    </div>
-  */
-
   getTableHeader() {
     return `
       <div data-element="header" class="sortable-table__header sortable-table__row">
@@ -145,21 +99,6 @@ export default class SortableTable {
         </span>`
       : '';
   }
-
-  /*
-    <div data-element="body" class="sortable-table__body">
-      <a href="/products/3d-ochki-epson-elpgs03" class="sortable-table__row">
-        <div class="sortable-table__cell">
-          <img class="sortable-table-image" alt="Image" src="http://magazilla.ru/jpg_zoom1/246743.jpg">
-        </div>
-        <div class="sortable-table__cell">3D очки Epson ELPGS03</div>
-
-        <div class="sortable-table__cell">16</div>
-        <div class="sortable-table__cell">91</div>
-        <div class="sortable-table__cell">6</div>
-      </a>
-    </div>
-  */
 
   getTableBody(data) {
     return `
