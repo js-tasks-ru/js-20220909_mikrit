@@ -156,7 +156,7 @@ export default class RangePicker {
   renderCalendar(showDate) {
     const date = new Date(showDate);
     const getGridStartIndex = dayIndex => {
-      const index = dayIndex === 0 ? 6 : (dayIndex - 1); // make Sunday (0) the last day
+      const index = dayIndex === 0 ? 6 : (dayIndex - 1);
       return index + 1;
     };
 
